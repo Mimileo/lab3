@@ -10,14 +10,12 @@
     <h1>
         Computer Card Game
     </h1>
-    <h2>
-        human computer
-    </h2>
+
     <body>
         
         <?php
         include 'functions.php';
-        play();
+        playerToll();
         ?>
         
     
