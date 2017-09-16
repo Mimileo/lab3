@@ -46,8 +46,9 @@ function player(){
     return $total;
 }
 
+
 function playerToll(){
-   for($i =1;$i<=4;$i++){
+   for($i =1;$i<=4;$i++) {
             ${"player" . $i } = player();
             echo "${'player' . $i }";
             echo "<br>";
