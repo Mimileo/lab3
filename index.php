@@ -15,6 +15,7 @@
         
         <?php
         include 'functions.php';
+        playerToll();
         ?>
         
     
