@@ -5,9 +5,19 @@
         <meta charset ="utf-8"/>
         <link href="./css/style.css" rel="stylesheet" type="text/css">
         <style>
+<<<<<<< HEAD
         </style>
     </head>
    
+=======
+            @import url("css/style.css");
+        </style>
+    </head>
+    <h1>
+        Computer Card Game
+    </h1>
+
+>>>>>>> 33514f1d666f0cb3c309e02fdca24d32861d181a
     <body>
         <h1>Silver Jack</h1>
         <table>
@@ -45,7 +55,7 @@
         </table>
         <?php
         include 'functions.php';
-        play();
+        playerToll();
         ?>
         
         

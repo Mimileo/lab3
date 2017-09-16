@@ -1,59 +1,58 @@
 
-        <?php
-        function displayCard($randomValue,$randomValue2){
-            
-            switch($randomValue){
-                case 0:$deck= "clubs";
-                        break;
-                case 1:$deck= "diamonds";
-                        break;
-                case 2: $deck= "hearts";
-                        break;
-                case 3:$deck= "spades";
-                        break;
+<?php
 
-            }
-             switch($randomValue2){
-                case 0:$symbol= "ten";
-                        break;
-                case 1:$symbol= "jack";
-                        break;
-                case 2: $symbol= "queen";
-                        break;
-                case 3:$symbol= "king";
-                        break;
-                case 4:$symbol= "ace";
-                        break;
-            }
-            echo "<img src='img/cards/$deck/$symbol.png' alt='$symbol'/>";
-        }
-        
-    function play(){
-        echo "<div id='move'>";
-        $card1;
-        $card2;
-        for($i =1;$i<=2;$i++){
-            $randomValue = rand(0,3);
-            $randomValue2 = rand(0,4);
-            ${"card" . $i } = $randomValue2;
-            displayCard($randomValue,$randomValue2);
-            
-        }
-        echo "<div id='win'>";
-         if($card1 > $card2)
-            {
-                echo "Human Wins";
-            }
-            else if($card1==$card2){
-                echo "Tied";
-            }
-            else{
-                echo "Computer Wins";
-            }
-           echo "</div>";
-         echo "</div>";
+    $deck = array();
+    $suits = array("clubs","spades","hearts","diamonds");
 
+for ($i = 0; $i < 4; $i++) {
+    for ($j = 1; $j <= 13; $j++) {
+    
+        $deck[] = $suits[$i] . "_" . $j;
     }
+    
+}
+function drawCard(){
+    global $deck;
+    $chosen;
+    shuffle($deck);
+    $chosen = array_pop($deck);
+    return $chosen;
+}
 
-        ?>
+function play($chosen){
+    $stringParts = explode("_", $chosen);
+
+    $firstPart  = $stringParts[0]; 
+    $secondPart = $stringParts[1];
+    echo "<img src='../lab3/cards/$firstPart/$secondPart.png' alt='$firstPart'>";
+    return $stringParts[1];
+}
+
+function player(){
+    $total=0;
+    while($total < 42 ){
+        $total += play(drawCard()); //still draws past 42 :c
+    }
+    return $total;
+}
+function playerToll(){
+   for($i =1;$i<=4;$i++){
+            ${"player" . $i } = player();
+            echo "${'player' . $i }";
+            echo "<br>";
+        }
+}
+/*foreach ($deck as $card) {
+$stringParts = explode("_", $card);
+
+$firstPart  = $stringParts[0]; 
+$secondPart = $stringParts[1]; 
+}*/
+
+
+
+
+
+        
+?>
         
