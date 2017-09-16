@@ -4,7 +4,7 @@
         <title> Cards </title>
         <meta charset ="utf-8"/>
         <style>
-            @import url("css/styles.css");
+            @import url("css/style.css");
         </style>
     </head>
     <h1>

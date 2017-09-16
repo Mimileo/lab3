@@ -25,7 +25,7 @@
                 case 4:$symbol= "ace";
                         break;
             }
-            echo "<img src='img/cards/$deck/$symbol.png' alt='$symbol'/>";
+            echo "<img src='cards/$deck/$symbol.png' alt='$symbol'/>";
         }
         
     function play(){
