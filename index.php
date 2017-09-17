@@ -5,17 +5,12 @@
         <meta charset ="utf-8"/>
         <link href="css/style.css" rel="stylesheet" type="text/css">
         <style>
-
-        </style>
-   
-  
             @import url("css/style.css");
         </style>
     </head>
     <h1>
         Computer Card Game
     </h1>
-
     <body>
         <h1>Silver Jack</h1>
         <table>
