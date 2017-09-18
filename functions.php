@@ -36,23 +36,54 @@ function play($chosen){
 
 function player(){
     $total = 0;
-    while($total <= 30 ) {
+    while($total <= 35 ) {
         $val = play(drawCard());
-        if($val + $total > 42){
-            break;
-        }
+        //if($val + $total > 42){
+          //  break;
+        //}
         $total+= $val; //still draws past 42 :c
     }
     return $total;
 }
 
-
+ $playerScore = array();
 function playerToll(){
-   for($i =1;$i<=4;$i++) {
+    global $playerscore;
+   
+  
+   for($i = 1;$i<=4;$i++) {
             ${"player" . $i } = player();
             echo "${'player' . $i }";
+            $playerScore[] = ${'player' . $i};
+            print_r($playerScore);
+            if(${'player' . $i } == 42) {
+                echo "<h3>Player ". $i . " Wins!</h3>";
+            }
             echo "<br>";
         }
+        displayWinner($playerScore);
+}
+
+function displayWinner($playerScore) {
+   
+    $max = 0;
+    $index = 0;
+    for($i=0;$i<4;$i++){
+        if($playerScore[$i] > $max && $playerScore[$i] <= 42  ) {
+            $max = $playerScore[$i];
+            echo $max;
+            $index = $i+1;
+        }
+       
+    }
+    echo "Player ". $index . "wins";
+    /*$min = array_search(min($playerScore), $playerScore);
+    $max = array_search(max($playerScore), $playerScore);
+    $minKey = min($playerScore);
+    
+    echo $min;
+    echo $playerscore;
+    echo $max;*/
 }
 /*foreach ($deck as $card) {
 $stringParts = explode("_", $card);
