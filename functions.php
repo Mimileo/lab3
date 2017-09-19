@@ -65,18 +65,35 @@ function playerToll(){
 }
 
 function displayWinner($playerScore) {
+    
    
     $max = 0;
     $index = 0;
-    for($i=0;$i<4;$i++){
+    $tie = 0;
+    for($i=0;$i<4;$i++) {
         if($playerScore[$i] > $max && $playerScore[$i] <= 42  ) {
             $max = $playerScore[$i];
-            echo $max;
+            //echo $max;
             $index = $i+1;
         }
        
     }
-    echo "Player ". $index . "wins";
+    for($j=0;$j<4;$j++) {
+        if($j == $index-1)
+        continue;
+        else { //&& $playerScore[$index-1] != $playerScore[$j]
+             if($playerScore[$j] == $max ) {
+                 $tie+=1;
+             }
+        }
+    }
+    
+    if($tie > 0 || $index == 0) {
+        echo "Tie!";
+    }
+    else {
+        echo "Player ". $index . " wins";
+    }
     /*$min = array_search(min($playerScore), $playerScore);
     $max = array_search(max($playerScore), $playerScore);
     $minKey = min($playerScore);
