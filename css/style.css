@@ -1,0 +1,47 @@
+     @import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina');
+
+    img {
+        border-radius:20px;
+    }
+    
+    body {
+        background-color: black;
+        color: white;
+        font-family:"Baloo Bhaina";        
+    }
+
+    
+    #reel1, #reel2{
+        top:248px;
+        position:absolute;
+    }
+    
+    #reel1{
+        left:145px;
+    }
+    #reel2{
+        left:252px;
+    }
+    #win{
+        text-align: center;
+    }
+    #move{
+        text-align: center;
+    }
+    h1,h2{
+        text-align: center;
+
+    }
+   
+ 
+
+ customize
+ {
+     float:left;
+ }
+ 
+ div
+ {
+     float:left;
+ }
+ 
