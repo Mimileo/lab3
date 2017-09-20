@@ -49,11 +49,6 @@ function player(){
 
 
 
-function displayPicName($p, $i){
-   // echo "<img src='img/$p[$i][1].png' />";
-    echo $p[$i][2];
-}
-
 function playerToll(){
     global $playerscore;
      $pics = array("pic1","pic2","pic3", "pic4");
@@ -121,13 +116,7 @@ function displayWinner($playerScore) {
     else {
         echo "Player ". $index . " wins " . $points . " points!";
     }
-    /*$min = array_search(min($playerScore), $playerScore);
-    $max = array_search(max($playerScore), $playerScore);
-    $minKey = min($playerScore);
-    
-    echo $min;
-    echo $playerscore;
-    echo $max;*/
+  
 }
 /*foreach ($deck as $card) {
 $stringParts = explode("_", $card);
