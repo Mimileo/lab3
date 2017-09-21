@@ -49,6 +49,7 @@ function player(){
 
 
 
+
 function playerToll(){
     global $playerscore;
      $pics = array("pic1","pic2","pic3", "pic4");
@@ -72,6 +73,7 @@ function playerToll(){
         }
         echo "  ";
         print_r($player1);
+        
         displayWinner($playerScore);
 }
 
@@ -105,8 +107,13 @@ function displayWinner($playerScore) {
              }
         }
     }
-    
-    $points = array_sum($playerScore) - $playerScore[$index-1];
+     $points = array_sum($playerScore);
+    for($i=0;$i<count($winner);$i++){
+       
+        echo "Subtract loser points";
+        $points= $points - $playerScore[($winner[$i])-1];
+        echo $points;
+     }
     if($tie > 0 || $index == 0) {
         echo "Tie!<br>";
         for($i=0;$i<count($winner);$i++){
