@@ -40,8 +40,8 @@
     h1,h2{
 >>>>>>> 0ca0e6be8fbcf033a45b9247203201f95d9466af
         text-align: center;
-
     }
+<<<<<<< HEAD
    
 <<<<<<< HEAD
  
@@ -54,6 +54,12 @@
      text-align: center;
  }
 =======
+=======
+   h3{
+       display: inline;
+       margin: 65px;
+   }
+>>>>>>> 4a88f2fa16d3592af6d140a24d88aa78c42418d3
    table{
        text-align: center;
    }

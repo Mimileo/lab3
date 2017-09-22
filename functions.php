@@ -4,14 +4,17 @@
 <?php
 =======
 <?php
-$start = microtime(true);
-
+   $start = microtime(true);
 session_start(); //start or resume a session
 if (!isset($_SESSION['matchCount'])) { //checks whether the session exists
     $_SESSION['matchCount'] = 1;
     $_SESSION['totalElapsedTime'] = 0;
 }
+<<<<<<< HEAD
 >>>>>>> 0ca0e6be8fbcf033a45b9247203201f95d9466af
+=======
+
+>>>>>>> 4a88f2fa16d3592af6d140a24d88aa78c42418d3
     $deck = array();
     $suits = array("clubs","spades","hearts","diamonds");
     
@@ -158,10 +161,9 @@ function displayWinner($playerScore) {
              }
         }
     }
-     $points = array_sum($playerScore);
+    $points = array_sum($playerScore);
     for($i=0;$i<count($winner);$i++){
-       
-        echo "Subtract loser points";
+       // echo "Subtract loser points";
         $points= $points - $playerScore[($winner[$i])-1];
         echo $points;
      }
@@ -174,8 +176,28 @@ function displayWinner($playerScore) {
     else {
         echo "Player ". $index . " wins " . $points . " points!";
     }
-  
+   //  echo "<br/>Matches: ". $_SESSION['matchCount']++ . "<br/>";
+       //  $elapsedSecs = microtime(true) - $start;
+//echo $elapsedSecs . " secs";
+//if($_SESSION['matchCount'] == 10){
+//echo "Avearge run time: " . $elapsedSecs; 
+//}
 }
+
+/*
+function elapsedTime(){
+global $start;
+     echo "<hr>";
+     $elapsedSecs = microtime(true) - $start;
+     echo "This match elapsed time: " . $elapsedSecs . " secs <br /><br/>";
+
+<<<<<<<<< saved version
+         $elapsedSecs = microtime(true) - $start;
+echo $elapsedSecs . " secs";
+if($_SESSION['matchCount'] == 10){
+echo "Avearge run time: " . $elapsedSecs; 
+}
+}*/
 
 function elapsedTime(){
 global $start;
@@ -193,6 +215,7 @@ global $start;
      
      $_SESSION['matchCount']++;
 } //elapsedTime
+
 
 
 
