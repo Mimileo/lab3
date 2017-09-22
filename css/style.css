@@ -1,4 +1,8 @@
+<<<<<<< HEAD
      @import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina');
+=======
+    @import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina');
+>>>>>>> 0ca0e6be8fbcf033a45b9247203201f95d9466af
 
     img {
         border-radius:20px;
@@ -28,13 +32,18 @@
     #move{
         text-align: center;
     }
+<<<<<<< HEAD
     
     h1,h2
     {
+=======
+    h1,h2{
+>>>>>>> 0ca0e6be8fbcf033a45b9247203201f95d9466af
         text-align: center;
 
     }
    
+<<<<<<< HEAD
  
  player
  {
@@ -44,3 +53,9 @@
  {
      text-align: center;
  }
+=======
+   table{
+       text-align: center;
+   }
+ 
+>>>>>>> 0ca0e6be8fbcf033a45b9247203201f95d9466af

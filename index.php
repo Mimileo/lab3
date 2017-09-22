@@ -13,6 +13,7 @@
     </h1>
     <body>
         <h1>Silver Jack</h1>
+<<<<<<< HEAD
       
         <div class="player" id="player1"> <img src="player1.jpg"  height="175" width="150" alt="Picture of a baby boy">
         
@@ -48,6 +49,46 @@
         ?>
         </center>
         </div>
+=======
+        <table>
+        <tr>
+            <th>Player</th>
+        <th>Cards</th></tr>
+        <tr>
+            <td>
+        <div class="player" id="player1">test1</div>
+        </td>
+        
+        <td> card goes here</td>
+        </tr>
+        <tr>
+            <td>
+        <div class="player" id="player2">test2</div>
+        </td>
+        <td> card goes here</td>
+        </tr>
+        
+        <tr>
+            <td>
+        <div class="player" id="player3">test3</div>
+        </td>
+        
+        <td> card goes here</td>
+        </tr>
+        <tr>
+            <td>
+        <div class="player" id="player4">test4</div>
+        </td>
+        
+        <td> card goes here</td>
+        </tr>
+        </table>
+        <?php
+        include 'functions.php';
+        playerToll();
+        elapsedTime();
+        ?>
+>>>>>>> 0ca0e6be8fbcf033a45b9247203201f95d9466af
         
         
         
