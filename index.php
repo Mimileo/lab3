@@ -1,21 +1,4 @@
-<?php
-  function elapsedTime(){
-global $start;
-     echo "<hr>";
-     $elapsedSecs = microtime(true) - $start;
-     echo "This match elapsed time: " . $elapsedSecs . " secs <br /><br/>";
 
-     echo "Matches played:"  . $_SESSION['matchCount'] . "<br />";
-
-     $_SESSION['totalElapsedTime'] += $elapsedSecs;
-     
-     echo "Total elapsed time in all matches: " .  $_SESSION['totalElapsedTime'] . "<br /><br />";
-     
-     echo "Average time: " . ( $_SESSION['totalElapsedTime']  / $_SESSION['matchCount']);
-     
-     $_SESSION['matchCount']++;
-} //elapsedTime
-?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -70,7 +53,7 @@ global $start;
         elapsedTime();
         ?>
         
-          <?php elapsedTime() ?>
+       
         
         
     </body>
