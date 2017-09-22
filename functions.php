@@ -1,5 +1,7 @@
 
 <?php
+    session_start();
+    $start = microtime(true);
 
     $deck = array();
     $suits = array("clubs","spades","hearts","diamonds");
@@ -9,6 +11,9 @@
     $player3 = array();
     $player4 = array();
 
+if(!isset($_SESSION['matchCount'])) {
+    $_SESSION['matchCount'];
+}
 for ($i = 0; $i < 4; $i++) {
     for ($j = 1; $j <= 13; $j++) {
     
@@ -107,9 +112,8 @@ function displayWinner($playerScore) {
              }
         }
     }
-     $points = array_sum($playerScore);
+    $points = array_sum($playerScore);
     for($i=0;$i<count($winner);$i++){
-       
         echo "Subtract loser points";
         $points= $points - $playerScore[($winner[$i])-1];
         echo $points;
@@ -123,7 +127,12 @@ function displayWinner($playerScore) {
     else {
         echo "Player ". $index . " wins " . $points . " points!";
     }
-  
+     echo "<br/>Matches: ". $_SESSION['matchCount']++ . "<br/>";
+         $elapsedSecs = microtime(true) - $start;
+echo $elapsedSecs . " secs";
+if($_SESSION['matchCount'] == 10){
+echo "Avearge run time: " . $elapsedSecs; 
+}
 }
 /*foreach ($deck as $card) {
 $stringParts = explode("_", $card);

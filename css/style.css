@@ -30,9 +30,11 @@
     }
     h1,h2{
         text-align: center;
-
     }
-   
+   h3{
+       display: inline;
+       margin: 65px;
+   }
    table{
        text-align: center;
    }
