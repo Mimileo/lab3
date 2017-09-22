@@ -1,17 +1,12 @@
 
 <?php
-<<<<<<< HEAD
-    session_start();
-    $start = microtime(true);
-=======
-$start = microtime(true);
->>>>>>> 0ca0e6be8fbcf033a45b9247203201f95d9466af
-
+   $start = microtime(true);
 session_start(); //start or resume a session
 if (!isset($_SESSION['matchCount'])) { //checks whether the session exists
     $_SESSION['matchCount'] = 1;
     $_SESSION['totalElapsedTime'] = 0;
 }
+
     $deck = array();
     $suits = array("clubs","spades","hearts","diamonds");
     
@@ -20,9 +15,6 @@ if (!isset($_SESSION['matchCount'])) { //checks whether the session exists
     $player3 = array();
     $player4 = array();
 
-if(!isset($_SESSION['matchCount'])) {
-    $_SESSION['matchCount'];
-}
 for ($i = 0; $i < 4; $i++) {
     for ($j = 1; $j <= 13; $j++) {
     
@@ -123,7 +115,7 @@ function displayWinner($playerScore) {
     }
     $points = array_sum($playerScore);
     for($i=0;$i<count($winner);$i++){
-        echo "Subtract loser points";
+       // echo "Subtract loser points";
         $points= $points - $playerScore[($winner[$i])-1];
         echo $points;
      }
@@ -136,13 +128,28 @@ function displayWinner($playerScore) {
     else {
         echo "Player ". $index . " wins " . $points . " points!";
     }
-     echo "<br/>Matches: ". $_SESSION['matchCount']++ . "<br/>";
+   //  echo "<br/>Matches: ". $_SESSION['matchCount']++ . "<br/>";
+       //  $elapsedSecs = microtime(true) - $start;
+//echo $elapsedSecs . " secs";
+//if($_SESSION['matchCount'] == 10){
+//echo "Avearge run time: " . $elapsedSecs; 
+//}
+}
+
+/*
+function elapsedTime(){
+global $start;
+     echo "<hr>";
+     $elapsedSecs = microtime(true) - $start;
+     echo "This match elapsed time: " . $elapsedSecs . " secs <br /><br/>";
+
+<<<<<<<<< saved version
          $elapsedSecs = microtime(true) - $start;
 echo $elapsedSecs . " secs";
 if($_SESSION['matchCount'] == 10){
 echo "Avearge run time: " . $elapsedSecs; 
 }
-}
+}*/
 
 function elapsedTime(){
 global $start;
@@ -160,6 +167,7 @@ global $start;
      
      $_SESSION['matchCount']++;
 } //elapsedTime
+
 
 
 
