@@ -49,6 +49,7 @@
         <?php
         include 'functions.php';
         playerToll();
+        elapsedTime();
         ?>
         
         
