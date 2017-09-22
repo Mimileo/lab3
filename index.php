@@ -67,6 +67,7 @@ global $start;
         <?php
         include 'functions.php';
         playerToll();
+        elapsedTime();
         ?>
         
           <?php elapsedTime() ?>

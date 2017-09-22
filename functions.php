@@ -1,8 +1,17 @@
 
 <?php
+<<<<<<< HEAD
     session_start();
     $start = microtime(true);
+=======
+$start = microtime(true);
+>>>>>>> 0ca0e6be8fbcf033a45b9247203201f95d9466af
 
+session_start(); //start or resume a session
+if (!isset($_SESSION['matchCount'])) { //checks whether the session exists
+    $_SESSION['matchCount'] = 1;
+    $_SESSION['totalElapsedTime'] = 0;
+}
     $deck = array();
     $suits = array("clubs","spades","hearts","diamonds");
     
@@ -134,12 +143,24 @@ if($_SESSION['matchCount'] == 10){
 echo "Avearge run time: " . $elapsedSecs; 
 }
 }
-/*foreach ($deck as $card) {
-$stringParts = explode("_", $card);
 
-$firstPart  = $stringParts[0]; 
-$secondPart = $stringParts[1]; 
-}*/
+function elapsedTime(){
+global $start;
+     echo "<hr>";
+     $elapsedSecs = microtime(true) - $start;
+     echo "This match elapsed time: " . $elapsedSecs . " secs <br /><br/>";
+
+     echo "Matches played:"  . $_SESSION['matchCount'] . "<br />";
+
+     $_SESSION['totalElapsedTime'] += $elapsedSecs;
+     
+     echo "Total elapsed time in all matches: " .  $_SESSION['totalElapsedTime'] . "<br /><br />";
+     
+     echo "Average time: " . ( $_SESSION['totalElapsedTime']  / $_SESSION['matchCount']);
+     
+     $_SESSION['matchCount']++;
+} //elapsedTime
+
 
 
 
