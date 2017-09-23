@@ -107,7 +107,7 @@ $secondPart = $stringParts[1];
 function playerToll(){
     global $playerscore;
      $pics = array("pic1","pic2","pic3", "pic4");
-     $names = array("Mimi", "Erik", "Andrea", "Joel");
+     $names = array("Player1", "Player2", "Player3", "Player4");
      $winner = array();
 
      $ar = array(0,1,2,3);
