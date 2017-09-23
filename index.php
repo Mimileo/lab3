@@ -1,4 +1,6 @@
-                                       
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,6 +15,7 @@
     <body>
         <font size=8;>
         <h1>Silver Jack</h1>
+
         </font>
 
       
@@ -58,6 +61,7 @@
             <td>
         <div class="player" id="player1">test1</div>
         </td>
+
         <!--<table>-->
         <!--<tr>-->
         <!--    <th>Player</th>-->
@@ -88,10 +92,10 @@
         <!--<div class="player" id="player4">test4</div>-->
         <!--</td>-->
         
+
         <!--<td> card goes here</td>-->
         <!--</tr>-->
         <!--</table>-->
-        
         
        
         

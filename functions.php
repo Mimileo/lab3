@@ -2,10 +2,12 @@
 $start = microtime(true);
 
 session_start(); //start or resume a session
+//session_destroy();
 if (!isset($_SESSION['matchCount'])) { //checks whether the session exists
     $_SESSION['matchCount'] = 1;
     $_SESSION['totalElapsedTime'] = 0;
 }
+
     $deck = array();
     $suits = array("clubs","spades","hearts","diamonds");
     
@@ -22,8 +24,6 @@ for ($i = 0; $i < 4; $i++) {
     }
     
 }
-
-
 
 function drawCard(){
     global $deck;
@@ -42,7 +42,6 @@ function play($chosen){
     return $stringParts[1];
 }
 
-
 function player(){
     $total = 0;
     while($total <= 35 ) {
@@ -54,16 +53,6 @@ function player(){
     }
     return $total;
 }
-
-/*foreach ($deck as $card) {
-$stringParts = explode("_", $card);
-$firstPart  = $stringParts[0]; 
-$secondPart = $stringParts[1]; 
-}*/
-        
-
-
-
 
 
 function playerToll(){
@@ -139,8 +128,9 @@ function displayWinner($playerScore) {
     else {
         echo "Player ". $index . " wins " . $points . " points!";
     }
-  
 }
+
+
 
 function elapsedTime(){
 global $start;
@@ -165,5 +155,6 @@ global $start;
 
 
         
+
 ?>
         

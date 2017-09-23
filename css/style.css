@@ -30,10 +30,14 @@
         text-align: center;
     }
     
+
     
-    h1,h2{
-        font-size: 60;
-       
+   
+    h1,h2
+    {
+        font-size: 45;
+        font-style: oblique;
+
         text-align: center;
       color: rgba(0,0,0,0.6);
  
@@ -56,6 +60,7 @@
        display: inline;
        margin: 65px;
    }
+   
    table{
        text-align: center;
    }
