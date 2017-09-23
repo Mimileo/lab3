@@ -1,8 +1,5 @@
      @import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina');
-<<<<<<< HEAD
-=======
     
->>>>>>> 66ef8e57079c334106597b5ec8b1868000f92783
 
     img {
         border-radius:20px;
@@ -33,15 +30,10 @@
         text-align: center;
     }
     
-<<<<<<< HEAD
     h1,h2
     {
-=======
-    
-    h1,h2{
         font-size: 45;
         font-style: oblique;
->>>>>>> 66ef8e57079c334106597b5ec8b1868000f92783
         text-align: center;
         text-shadow: 2px 2px 4px #000000;
     }
