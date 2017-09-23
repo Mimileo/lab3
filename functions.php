@@ -1,20 +1,12 @@
-
-<<<<<<< HEAD
-      
-<?php
-=======
 <?php
    $start = microtime(true);
 session_start(); //start or resume a session
+//session_destroy();
 if (!isset($_SESSION['matchCount'])) { //checks whether the session exists
     $_SESSION['matchCount'] = 1;
     $_SESSION['totalElapsedTime'] = 0;
 }
-<<<<<<< HEAD
->>>>>>> 0ca0e6be8fbcf033a45b9247203201f95d9466af
-=======
 
->>>>>>> 4a88f2fa16d3592af6d140a24d88aa78c42418d3
     $deck = array();
     $suits = array("clubs","spades","hearts","diamonds");
     
@@ -22,10 +14,7 @@ if (!isset($_SESSION['matchCount'])) { //checks whether the session exists
     $player2 = array();
     $player3 = array();
     $player4 = array();
-<<<<<<< HEAD
-=======
 
->>>>>>> 0ca0e6be8fbcf033a45b9247203201f95d9466af
 for ($i = 0; $i < 4; $i++) {
     for ($j = 1; $j <= 13; $j++) {
     
@@ -33,11 +22,7 @@ for ($i = 0; $i < 4; $i++) {
     }
     
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 0ca0e6be8fbcf033a45b9247203201f95d9466af
 function drawCard(){
     global $deck;
     $chosen;
@@ -45,29 +30,15 @@ function drawCard(){
     $chosen = array_pop($deck);
     return $chosen;
 }
-<<<<<<< HEAD
-function play($chosen){
-    $stringParts = explode("_", $chosen);
-=======
 
 function play($chosen){
     $stringParts = explode("_", $chosen);
 
->>>>>>> 0ca0e6be8fbcf033a45b9247203201f95d9466af
     $firstPart  = $stringParts[0]; 
     $secondPart = $stringParts[1];
     echo "<img src='../lab3/cards/$firstPart/$secondPart.png' alt='$firstPart'>";
     return $stringParts[1];
 }
-<<<<<<< HEAD
-function player(){
-    $total = 0;
-    while($total <= 30 ) {
-        $val = play(drawCard());
-        if($val + $total > 42){
-            break;
-        }
-=======
 
 function player(){
     $total = 0;
@@ -76,32 +47,11 @@ function player(){
         //if($val + $total > 42){
           //  break;
         //}
->>>>>>> 0ca0e6be8fbcf033a45b9247203201f95d9466af
+
         $total+= $val; //still draws past 42 :c
     }
     return $total;
 }
-<<<<<<< HEAD
-function playerToll(){
-   for($i =1;$i<=4;$i++) {
-            ${"player" . $i } = player();
-            echo "${'player' . $i }";
-            echo "<br>";
-            echo "<br>";
-             
-                 
-        }
-}
-/*foreach ($deck as $card) {
-$stringParts = explode("_", $card);
-$firstPart  = $stringParts[0]; 
-$secondPart = $stringParts[1]; 
-}*/
-        
-?>
-=======
-
-
 
 
 function playerToll(){
@@ -176,28 +126,8 @@ function displayWinner($playerScore) {
     else {
         echo "Player ". $index . " wins " . $points . " points!";
     }
-   //  echo "<br/>Matches: ". $_SESSION['matchCount']++ . "<br/>";
-       //  $elapsedSecs = microtime(true) - $start;
-//echo $elapsedSecs . " secs";
-//if($_SESSION['matchCount'] == 10){
-//echo "Avearge run time: " . $elapsedSecs; 
-//}
 }
 
-/*
-function elapsedTime(){
-global $start;
-     echo "<hr>";
-     $elapsedSecs = microtime(true) - $start;
-     echo "This match elapsed time: " . $elapsedSecs . " secs <br /><br/>";
-
-<<<<<<<<< saved version
-         $elapsedSecs = microtime(true) - $start;
-echo $elapsedSecs . " secs";
-if($_SESSION['matchCount'] == 10){
-echo "Avearge run time: " . $elapsedSecs; 
-}
-}*/
 
 function elapsedTime(){
 global $start;
@@ -224,5 +154,3 @@ global $start;
 
         
 ?>
-        
->>>>>>> 0ca0e6be8fbcf033a45b9247203201f95d9466af

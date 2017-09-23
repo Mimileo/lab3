@@ -14,43 +14,6 @@
     </h1>
     <body>
         <h1>Silver Jack</h1>
-<<<<<<< HEAD
-      
-        <div class="player" id="player1"> <img src="player1.jpg"  height="175" width="150" alt="Picture of a baby boy">
-        
-</div>
-    
-        
-        
-
-        <div class="player" id="player2"> <img src="player1.jpg"  height="175" width="150" alt="Picture of a baby boy">
-</div>
-      
-        
-    
-        
-      
-           
-        <div class="player" id="player3"> <img src="player1.jpg"  height="175" width="150" alt="Picture of a baby boy">
-</div>
-      
-        
-       
-       
-       
-          
-        <div class="player" id="player4"> <img src="player1.jpg"  height="175" width="150" alt="Picture of a baby boy">
-</div>
-        
-     <div class="work">
-        <center>
-        <?php
-        include 'functions.php';
-        playerToll();
-        ?>
-        </center>
-        </div>
-=======
         <table>
         <tr>
             <th>Player</th>
@@ -89,7 +52,6 @@
         playerToll();
         elapsedTime();
         ?>
->>>>>>> 0ca0e6be8fbcf033a45b9247203201f95d9466af
         
        
         
