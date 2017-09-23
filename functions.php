@@ -1,12 +1,16 @@
 <?php
-   $start = microtime(true);
+$start = microtime(true);
+
 session_start(); //start or resume a session
 //session_destroy();
 if (!isset($_SESSION['matchCount'])) { //checks whether the session exists
     $_SESSION['matchCount'] = 1;
     $_SESSION['totalElapsedTime'] = 0;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 66ef8e57079c334106597b5ec8b1868000f92783
     $deck = array();
     $suits = array("clubs","spades","hearts","diamonds");
     
@@ -15,6 +19,10 @@ if (!isset($_SESSION['matchCount'])) { //checks whether the session exists
     $player3 = array();
     $player4 = array();
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 66ef8e57079c334106597b5ec8b1868000f92783
 for ($i = 0; $i < 4; $i++) {
     for ($j = 1; $j <= 13; $j++) {
     
@@ -22,7 +30,13 @@ for ($i = 0; $i < 4; $i++) {
     }
     
 }
+<<<<<<< HEAD
 
+=======
+
+
+
+>>>>>>> 66ef8e57079c334106597b5ec8b1868000f92783
 function drawCard(){
     global $deck;
     $chosen;
@@ -39,6 +53,10 @@ function play($chosen){
     echo "<img src='../lab3/cards/$firstPart/$secondPart.png' alt='$firstPart'>";
     return $stringParts[1];
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 66ef8e57079c334106597b5ec8b1868000f92783
 
 function player(){
     $total = 0;
@@ -47,17 +65,33 @@ function player(){
         //if($val + $total > 42){
           //  break;
         //}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 66ef8e57079c334106597b5ec8b1868000f92783
         $total+= $val; //still draws past 42 :c
     }
     return $total;
 }
+<<<<<<< HEAD
+=======
+
+/*foreach ($deck as $card) {
+$stringParts = explode("_", $card);
+$firstPart  = $stringParts[0]; 
+$secondPart = $stringParts[1]; 
+}*/
+        
+
+
+
+>>>>>>> 66ef8e57079c334106597b5ec8b1868000f92783
 
 
 function playerToll(){
     global $playerscore;
      $pics = array("pic1","pic2","pic3", "pic4");
-     $names = array("Mimi", "Erik", "Andrea", "Joel");
+     $names = array("Player1", "Player2", "Player3", "Player4");
      $winner = array();
 
      $ar = array(0,1,2,3);
@@ -111,9 +145,10 @@ function displayWinner($playerScore) {
              }
         }
     }
-    $points = array_sum($playerScore);
+     $points = array_sum($playerScore);
     for($i=0;$i<count($winner);$i++){
-       // echo "Subtract loser points";
+       
+        echo "Subtract loser points";
         $points= $points - $playerScore[($winner[$i])-1];
         echo $points;
      }
@@ -126,8 +161,13 @@ function displayWinner($playerScore) {
     else {
         echo "Player ". $index . " wins " . $points . " points!";
     }
+<<<<<<< HEAD
 }
 
+=======
+  
+}
+>>>>>>> 66ef8e57079c334106597b5ec8b1868000f92783
 
 function elapsedTime(){
 global $start;
@@ -151,6 +191,10 @@ global $start;
 
 
 
-
         
+<<<<<<< HEAD
 ?>
+=======
+?>
+        
+>>>>>>> 66ef8e57079c334106597b5ec8b1868000f92783
