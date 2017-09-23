@@ -1,4 +1,4 @@
-     @import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina');
+     @import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
     
 
     img {
@@ -6,7 +6,7 @@
     }
     
     body {
-        background-color: black;
+        background-color: #110100;
         color: white;
         font-family:"Baloo Bhaina";        
     }
@@ -32,10 +32,15 @@
     
     
     h1,h2{
-        font-size: 45;
-        font-style: oblique;
+        font-size: 60;
+       
         text-align: center;
-        text-shadow: 2px 2px 4px #000000;
+      color: rgba(0,0,0,0.6);
+ 
+    color: white;
+     text-shadow: 2px 2px 4px #000000;
+    
+     padding-bottom:3px;
     }
    
  
@@ -56,6 +61,6 @@
    }
    body
    {
-       background-color: #03560b;
+       background-color: #700606;
    }
  

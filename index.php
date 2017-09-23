@@ -1,4 +1,4 @@
-/
+                                       
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,20 +11,10 @@
     </head>
   
     <body>
+        <font size=8;>
         <h1>Silver Jack</h1>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        <!--<table>-->
-        <!--<tr>-->
-        <!--    <th>Player</th>-->
-        <!--<th>Cards</th></tr>-->
-        <!--<tr>-->
-        <!--    <td>-->
-        <!--<div class="player" id="player1">test1</div>-->
-        <!--</td>-->
-=======
-<<<<<<< HEAD
+        </font>
+
       
         <div class="player" id="player1"> <img src="player1.jpg"  height="175" width="150" alt="Picture of a baby boy">
         
@@ -60,8 +50,6 @@
         ?>
         </center>
         </div>
-=======
->>>>>>> b61183c12467390fb00764bf3b388f06179f1963
         <table>
         <tr>
             <th>Player</th>
@@ -70,7 +58,14 @@
             <td>
         <div class="player" id="player1">test1</div>
         </td>
->>>>>>> d8624ace643bc6d2846976579eaf8e087b36a309
+        <!--<table>-->
+        <!--<tr>-->
+        <!--    <th>Player</th>-->
+        <!--<th>Cards</th></tr>-->
+        <!--<tr>-->
+        <!--    <td>-->
+        <!--<div class="player" id="player1">test1</div>-->
+        <!--</td>-->
         
         <!--<td> card goes here</td>-->
         <!--</tr>-->
@@ -96,11 +91,7 @@
         <!--<td> card goes here</td>-->
         <!--</tr>-->
         <!--</table>-->
-        <?php
-        include 'functions.php';
-        playerToll();
-        elapsedTime();
-        ?>
+        
         
        
         
