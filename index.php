@@ -43,9 +43,6 @@
         <!--<div class="player" id="player4">test4</div>-->
         <!--</td>-->
         
-        <!--<td> card goes here</td>-->
-        <!--</tr>-->
-        <!--</table>-->
         <?php
         include 'functions.php';
         playerToll();
