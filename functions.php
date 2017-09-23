@@ -69,7 +69,7 @@ function playerToll(){
                 ${"player" . $i } = player();
                 echo " ${'player' . $i } ";
                 $playerScore[] = ${'player' . $i};
-                print_r($playerScore);
+                //print_r($playerScore);
                 if(${'player' . $i } == 42) {
                     echo " <br/><h3>Player ". $i . " Wins!</h3>";
                 }
@@ -77,7 +77,7 @@ function playerToll(){
                 
         }
         echo "  ";
-        print_r($player1);
+         //print_r($player1);
         
         displayWinner($playerScore);
 }
@@ -102,7 +102,7 @@ function displayWinner($playerScore) {
     for($j=0;$j<4;$j++) {
           if($playerScore[$j] == $max){
               array_push($winner, $j+1);
-              print_r($winner);
+              //print_r($winner);
           }
         if($j == $index-1)
         continue;
@@ -115,9 +115,9 @@ function displayWinner($playerScore) {
      $points = array_sum($playerScore);
     for($i=0;$i<count($winner);$i++){
        
-        echo "Subtract loser points";
+        //echo "Subtract loser points";
         $points= $points - $playerScore[($winner[$i])-1];
-        echo $points;
+        //echo $points;
      }
     if($tie > 0 || $index == 0) {
         echo "Tie!<br>";
@@ -138,7 +138,7 @@ global $start;
      $elapsedSecs = microtime(true) - $start;
      echo "This match elapsed time: " . $elapsedSecs . " secs <br /><br/>";
 
-     echo "Matches played:"  . $_SESSION['matchCount'] . "<br />";
+     echo "Matches played:"  . $_SESSION['matchCount'] . "<br /> <br/>";
 
      $_SESSION['totalElapsedTime'] += $elapsedSecs;
      

@@ -25,17 +25,18 @@
         <?php
         include 'functions.php';
         playerToll();
+        elapsedTime();
         ?>
         </center>
         </div>
-        <table>
-        <tr>
-            <th>Player</th>
-        <th>Cards</th></tr>
-        <tr>
-            <td>
-        <div class="player" id="player1">test1</div>
-        </td>
+        <!--<table>-->
+        <!--<tr>-->
+        <!--    <th>Player</th>-->
+        <!--<th>Cards</th></tr>-->
+        <!--<tr>-->
+        <!--    <td>-->
+        <!--<div class="player" id="player1">test1</div>-->
+        <!--</td>-->
 
         <!--<table>-->
         <!--<tr>-->
