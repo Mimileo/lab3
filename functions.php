@@ -57,20 +57,20 @@ function player(){
 function playerToll(){
     global $playerscore;
      $pics = array("pic1","pic2","pic3", "pic4");
-     $names = array("name1", "name2", "name3", "name4");
+     $names = array("Mimi", "Erik", "Andrea", "Joel");
      $winner = array();
 
      $ar = array(0,1,2,3);
      shuffle($ar);
     for($i = 1;$i<=4;$i++) {
                 $k=$ar[$i-1];  
-                echo "<img src='img/$pics[$k].png' width='70'>" . $names[$k];
+                echo "<img src='img/$pics[$k].png' width='100'>" . $names[$k];
                 ${"player" . $i } = player();
                 echo " ${'player' . $i } ";
                 $playerScore[] = ${'player' . $i};
                 print_r($playerScore);
                 if(${'player' . $i } == 42) {
-                    echo "<h3>Player ". $i . " Wins!</h3>";
+                    echo " <br/><h3>Player ". $i . " Wins!</h3>";
                 }
                 echo "<br>";
                 
